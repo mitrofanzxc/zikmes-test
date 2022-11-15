@@ -9,9 +9,8 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 body {
   @include roboto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   height: 100vh;
   background-image: url('./images/background.jpg');
   background-size: cover;
@@ -23,6 +22,7 @@ body {
 }
 
 .form {
+  position: relative;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   width: 85%;
@@ -30,7 +30,6 @@ body {
 
   @media (max-width: $breakpoint-md-min) {
     grid-template-columns: 2fr 1fr;
-    gap: 1px;
     width: 98%;
   }
 
@@ -46,6 +45,7 @@ body {
   overflow: hidden;
 
   @media (max-width: $breakpoint-md-min) {
+    border-right-width: 1px;
     transform: skewX(0);
   }
 }
@@ -56,7 +56,7 @@ body {
   padding: $base * 8 $base * 2 $base * 8 $base * 10;
   background-color: transparent;
   color: $color-dark-09;
-  font-size: calc($fs-l + 1.5vw);
+  font-size: calc($fs-m + 1.5vw);
   font-weight: $fw-bold;
   border: none;
   transform: skewX(45deg);
@@ -82,6 +82,7 @@ body {
   overflow: hidden;
 
   @media (max-width: $breakpoint-md-min) {
+    border-left-width: 1px;
     transform: skewX(0);
   }
 }
@@ -91,7 +92,7 @@ body {
   height: 100%;
   background-color: transparent;
   color: $color-white;
-  font-size: calc($fs-l + 1.3vw);
+  font-size: calc($fs-m + 1.3vw);
   font-weight: $fw-bold;
   text-transform: uppercase;
   border: none;
@@ -104,4 +105,14 @@ body {
   @media (max-width: $breakpoint-xs-min) {
     font-size: calc($fs-xs + 1.3vw);
   }
+}
+
+.form__modal {
+  position: absolute;
+  bottom: -$base * 8;
+  left: $base * 12;
+  padding: $base * 2;
+  background-color: $color-white;
+  color: $color-dark;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
