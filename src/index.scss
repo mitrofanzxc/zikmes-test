@@ -2,6 +2,11 @@
 @import './sass/normalize.scss';
 @import './sass/reset.scss';
 
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
 body {
   @include roboto;
   display: flex;
@@ -86,7 +91,7 @@ body {
   height: 100%;
   background-color: transparent;
   color: $color-white;
-  font-size: calc($fs-l + 1.5vw);
+  font-size: calc($fs-l + 1.3vw);
   font-weight: $fw-bold;
   text-transform: uppercase;
   border: none;
@@ -97,6 +102,6 @@ body {
   }
 
   @media (max-width: $breakpoint-xs-min) {
-    font-size: calc($fs-xs + 1.5vw);
+    font-size: calc($fs-xs + 1.3vw);
   }
 }
