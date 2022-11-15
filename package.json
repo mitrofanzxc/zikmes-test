@@ -1,7 +1,7 @@
 {
-  "name": "webpack",
+  "name": "zikmes-test",
   "version": "1.0.0",
-  "homepage": "https://mitrofanzxc.github.io/cv",
+  "homepage": "https://mitrofanzxc.github.io/zikmes-test",
   "private": true,
   "main": "index.js",
   "license": "MIT",
