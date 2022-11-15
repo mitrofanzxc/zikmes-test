@@ -19,9 +19,19 @@ body {
 
 .form {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   width: 85%;
   margin: 0 auto;
+
+  @media (max-width: $breakpoint-md-min) {
+    grid-template-columns: 2fr 1fr;
+    gap: 1px;
+    width: 98%;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    grid-template-columns: 2fr 1.4fr;
+  }
 }
 
 .input-wrapper {
@@ -29,6 +39,10 @@ body {
   background-color: $color-grey-09;
   border: 2px solid $color-white;
   overflow: hidden;
+
+  @media (max-width: $breakpoint-md-min) {
+    transform: skewX(0);
+  }
 }
 
 .form__input {
@@ -37,10 +51,19 @@ body {
   padding: $base * 8 $base * 2 $base * 8 $base * 10;
   background-color: transparent;
   color: $color-dark-09;
-  font-size: $fs-xl;
+  font-size: calc($fs-l + 1.5vw);
   font-weight: $fw-bold;
   border: none;
   transform: skewX(45deg);
+
+  @media (max-width: $breakpoint-md-min) {
+    padding: $base * 8 $base * 2 $base * 8 $base * 2;
+    transform: skewX(0);
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    font-size: calc($fs-xs + 1.5vw);
+  }
 
   &::placeholder {
     color: $color-dark-09;
@@ -52,6 +75,10 @@ body {
   background-color: $color-red-09;
   border: 2px solid $color-white;
   overflow: hidden;
+
+  @media (max-width: $breakpoint-md-min) {
+    transform: skewX(0);
+  }
 }
 
 .form__submit {
@@ -59,9 +86,17 @@ body {
   height: 100%;
   background-color: transparent;
   color: $color-white;
-  font-size: $fs-xl;
+  font-size: calc($fs-l + 1.5vw);
   font-weight: $fw-bold;
   text-transform: uppercase;
   border: none;
   transform: skewX(45deg);
+
+  @media (max-width: $breakpoint-md-min) {
+    transform: skewX(0);
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    font-size: calc($fs-xs + 1.5vw);
+  }
 }
