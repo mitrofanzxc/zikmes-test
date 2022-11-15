@@ -1,0 +1,10 @@
+@import './sass/constants.scss';
+@import './sass/normalize.scss';
+@import './sass/reset.scss';
+
+body {
+  @include roboto;
+  background-color: $color-white;
+  color: $color-dark;
+  scroll-behavior: smooth;
+}
