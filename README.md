@@ -1,9 +1,23 @@
-# Тестовое задание
+# Deploy: [Link](https://mitrofanzxc.github.io/zikmes-test/)
+
+### `yarn`
+
+Install all dependencies.
+
+### `yarn start`
+
+Run the app in the development mode.
+
+## Тестовое задание
 
 - [x] Сверстать форму с полем для ввода и кнопкой как на изображении
+
 <img src="./src/images/form-desktop.jpg" width="auto" height="100">
+
 - [x] Вид формы на мобильных устройствах
+
 <img src="./src/images/form-mobile.jpg" width="auto" height="100">
+
 - [x] Организовать простую валидацию поля (должно быть заполнено)
 - [x] При нажатии кнопки отправлять данные из формы на любой сервис (на ваше усмотрение) без перезагрузки страницы
 - [x] После получения ответа вывести уведомление о результате выполнения запроса
