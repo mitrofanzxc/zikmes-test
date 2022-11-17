@@ -1,10 +1,12 @@
 export default class Toast {
   message: string;
+  isSuccess: boolean;
   timerToast!: ReturnType<typeof setTimeout>;
   timerProgress!: ReturnType<typeof setTimeout>;
 
-  constructor(message: string) {
+  constructor(message: string, isSuccess: boolean) {
     this.message = message;
+    this.isSuccess = isSuccess;
     this.timerToast;
     this.timerProgress;
   }
@@ -30,7 +32,7 @@ export default class Toast {
 
     const TOAST_HEADER = document.createElement('span') as HTMLSpanElement;
     TOAST_HEADER.classList.add('toast__header');
-    TOAST_HEADER.textContent = 'Ошибка';
+    TOAST_HEADER.textContent = this.isSuccess ? 'Заказ прянят' : 'Ошибка';
     TOAST_TEXT.appendChild(TOAST_HEADER);
 
     const TOAST_MESSAGE = document.createElement('span') as HTMLSpanElement;
@@ -57,14 +59,14 @@ export default class Toast {
 
       this.timerToast = setTimeout(() => {
         TOAST.classList.remove('toast_active');
-      }, 1500);
+      }, 2000);
 
       this.timerProgress = setTimeout(() => {
         TOAST_PROGRESS.classList.remove('toast_active');
         this.remove();
         BUTTON_SUBMIT.removeAttribute('disabled');
         SUBMIT_WRAPPER.classList.remove('submit-wrapper_disabled');
-      }, 1800);
+      }, 2300);
     }, 0);
   }
 

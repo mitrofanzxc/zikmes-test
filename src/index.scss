@@ -22,6 +22,22 @@ body {
   overflow-x: hidden;
 }
 
+.border-left_yellow {
+  border-left: 6px solid $color-yellow;
+}
+
+.border-left_green {
+  border-left: 6px solid $color-green;
+}
+
+.bg-color_yellow {
+  background-color: $color-yellow;
+}
+
+.bg-color_green {
+  background-color: $color-green;
+}
+
 .form {
   position: relative;
   display: grid;
