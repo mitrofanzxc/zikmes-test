@@ -1,0 +1,95 @@
+// === MIXIN ===
+
+@mixin roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+// === / MIXIN ===
+
+// === FUNCTIONS ===
+
+@function strip-unit($num) {
+  @return calc($num / ($num * 0 + 1px));
+}
+
+@function rem($num) {
+  @return (calc(strip-unit($num) / 16)) * 1rem;
+}
+
+// === / FUNCTIONS ===
+
+// === VARIABLES ===
+
+$base: rem(5px);
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-xs: rem(14px);
+$fs-s: rem(16px);
+$fs-m: rem(18px);
+$fs-l: rem(20px);
+$fs-xl: rem(24px);
+$fs-xxl: rem(34px);
+
+$transition-01: 0.1s;
+$transition-02: 0.2s;
+$transition-03: 0.3s;
+
+$color-dark: rgba(18, 18, 18, 1);
+$color-dark-02: rgba(18, 18, 18, 0.2);
+$color-dark-03: rgba(18, 18, 18, 0.3);
+$color-dark-04: rgba(18, 18, 18, 0.4);
+$color-dark-05: rgba(18, 18, 18, 0.5);
+$color-dark-06: rgba(18, 18, 18, 0.6);
+$color-dark-07: rgba(18, 18, 18, 0.7);
+$color-dark-08: rgba(18, 18, 18, 0.8);
+$color-dark-09: rgba(18, 18, 18, 0.9);
+$color-white: rgba(255, 255, 255, 1);
+$color-white-02: rgba(255, 255, 255, 0.2);
+$color-white-03: rgba(255, 255, 255, 0.3);
+$color-white-04: rgba(255, 255, 255, 0.4);
+$color-white-05: rgba(255, 255, 255, 0.5);
+$color-white-06: rgba(255, 255, 255, 0.6);
+$color-white-07: rgba(255, 255, 255, 0.7);
+$color-white-08: rgba(255, 255, 255, 0.8);
+$color-white-09: rgba(255, 255, 255, 0.9);
+$color-grey: rgba(208, 208, 208, 1);
+$color-grey-02: rgba(208, 208, 208, 0.2);
+$color-grey-03: rgba(208, 208, 208, 0.3);
+$color-grey-04: rgba(208, 208, 208, 0.4);
+$color-grey-05: rgba(208, 208, 208, 0.5);
+$color-grey-06: rgba(208, 208, 208, 0.6);
+$color-grey-07: rgba(208, 208, 208, 0.7);
+$color-grey-08: rgba(208, 208, 208, 0.8);
+$color-grey-09: rgba(208, 208, 208, 0.9);
+$color-red: rgba(254, 0, 0, 1);
+$color-red-02: rgba(254, 0, 0, 0.2);
+$color-red-03: rgba(254, 0, 0, 0.3);
+$color-red-04: rgba(254, 0, 0, 0.4);
+$color-red-05: rgba(254, 0, 0, 0.5);
+$color-red-06: rgba(254, 0, 0, 0.6);
+$color-red-07: rgba(254, 0, 0, 0.7);
+$color-red-08: rgba(254, 0, 0, 0.8);
+$color-red-09: rgba(254, 0, 0, 0.9);
+$color-yellow: rgba(255, 235, 59, 1);
+$color-green: rgba(76, 175, 80, 1);
+
+$breakpoint-xxs-min: 320px;
+$breakpoint-xs-min: 480px;
+$breakpoint-sm-min: 576px;
+$breakpoint-md-min: 768px;
+$breakpoint-lg-min: 992px;
+$breakpoint-xl-min: 1200px;
+$breakpoint-xxl-min: 1440px;
+
+$breakpoint-xxxs-max: $breakpoint-xxs-min - 1px;
+$breakpoint-xxs-max: $breakpoint-xs-min - 1px;
+$breakpoint-xs-max: $breakpoint-sm-min - 1px;
+$breakpoint-sm-max: $breakpoint-md-min - 1px;
+$breakpoint-md-max: $breakpoint-lg-min - 1px;
+$breakpoint-lg-max: $breakpoint-xl-min - 1px;
+$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
+
+// === / VARIABLES ===

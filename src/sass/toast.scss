@@ -1,0 +1,116 @@
+@import './constants.scss';
+
+.toast {
+  position: absolute;
+  top: 105%;
+  left: -100%;
+  padding: $base * 4 $base * 7 $base * 4 $base * 5;
+  border-radius: $base * 3;
+  background: $color-white;
+  box-shadow: 0 $base $base * 2 rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+  overflow: hidden;
+
+  @media (max-width: $breakpoint-md-min) {
+    padding: $base * 2 $base * 5 $base * 2 $base * 4;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    padding: $base * 2 $base * 3 $base * 2 $base * 2;
+  }
+}
+
+.toast.toast_active {
+  left: 0;
+}
+
+.toast__content {
+  display: flex;
+  align-items: center;
+}
+
+.toast__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: $base * 7;
+  width: $base * 7;
+  min-height: $base * 7;
+  height: $base * 7;
+  color: $color-white;
+  font-size: $base * 4;
+  border-radius: 50%;
+
+  @media (max-width: $breakpoint-md-min) {
+    font-size: $base * 3;
+  }
+}
+
+.toast__text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 $base * 4;
+  color: $color-dark-06;
+  font-size: $base * 4;
+
+  @media (max-width: $breakpoint-md-min) {
+    font-size: $base * 3;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    margin: 0 $base * 2;
+  }
+}
+
+.toast__header {
+  font-weight: $fw-medium;
+  color: $color-dark-09;
+}
+
+.toast__close {
+  position: absolute;
+  top: $base * 2;
+  right: $base * 3;
+  padding: $base;
+  cursor: pointer;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    top: $base;
+  }
+}
+
+.toast__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.188rem;
+  background: $color-grey-09;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-yellow;
+  }
+}
+
+.toast__progress.toast_active {
+  &:before {
+    animation: progress 2.5s linear forwards;
+  }
+}
+
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}

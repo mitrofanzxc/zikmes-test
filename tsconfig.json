@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "images/*": ["images/*"],
+      "sass/*": ["sass/*"],
+      "utils/*": ["utils/*"]
+    },
+    "allowJs": true,
+    "target": "es2021",
+    "useDefineForClassFields": true,
+    "module": "es6",
+    "rootDir": ".",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  }
+}
