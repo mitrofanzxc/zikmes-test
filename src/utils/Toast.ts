@@ -13,17 +13,26 @@ export default class Toast {
 
   create() {
     const FORM = document.querySelector('.form') as HTMLFormElement;
-    const SUBMIT_WRAPPER = document.querySelector('.submit-wrapper') as HTMLDivElement;
     const BUTTON_SUBMIT = FORM.querySelector('.form__submit') as HTMLButtonElement;
     const TOAST = document.createElement('div') as HTMLDivElement;
     TOAST.classList.add('toast');
+    if (this.isSuccess) {
+      TOAST.classList.add('border-left_green');
+    } else {
+      TOAST.classList.add('border-left_yellow');
+    }
 
     const TOAST_CONTENT = document.createElement('div') as HTMLDivElement;
     TOAST_CONTENT.classList.add('toast__content');
     TOAST.appendChild(TOAST_CONTENT);
 
     const TOAST_ICON = document.createElement('i') as HTMLElement;
-    TOAST_ICON.classList.add('fa-solid', 'fa-triangle-exclamation', 'toast__icon');
+    TOAST_ICON.classList.add('fa-solid', 'toast__icon');
+    if (this.isSuccess) {
+      TOAST_ICON.classList.add('fa-check', 'bg-color_green');
+    } else {
+      TOAST_ICON.classList.add('fa-triangle-exclamation', 'bg-color_yellow');
+    }
     TOAST_CONTENT.appendChild(TOAST_ICON);
 
     const TOAST_TEXT = document.createElement('div') as HTMLDivElement;
@@ -32,7 +41,7 @@ export default class Toast {
 
     const TOAST_HEADER = document.createElement('span') as HTMLSpanElement;
     TOAST_HEADER.classList.add('toast__header');
-    TOAST_HEADER.textContent = this.isSuccess ? 'Заказ прянят' : 'Ошибка';
+    TOAST_HEADER.textContent = this.isSuccess ? 'Заказ обрабатывается' : 'Ошибка';
     TOAST_TEXT.appendChild(TOAST_HEADER);
 
     const TOAST_MESSAGE = document.createElement('span') as HTMLSpanElement;
@@ -53,20 +62,18 @@ export default class Toast {
 
     setTimeout(() => {
       BUTTON_SUBMIT.setAttribute('disabled', '');
-      SUBMIT_WRAPPER.classList.add('submit-wrapper_disabled');
       TOAST.classList.add('toast_active');
       TOAST_PROGRESS.classList.add('toast_active');
 
       this.timerToast = setTimeout(() => {
         TOAST.classList.remove('toast_active');
-      }, 2000);
+      }, 2500);
 
       this.timerProgress = setTimeout(() => {
         TOAST_PROGRESS.classList.remove('toast_active');
         this.remove();
         BUTTON_SUBMIT.removeAttribute('disabled');
-        SUBMIT_WRAPPER.classList.remove('submit-wrapper_disabled');
-      }, 2300);
+      }, 2800);
     }, 0);
   }
 

@@ -16,7 +16,6 @@ function submit(event: Event) {
     new Toast('Введите корректный номер телефона!', false).create();
   } else {
     order(INPUT_TEL.value);
-    INPUT_TEL.value = '';
   }
 }
 

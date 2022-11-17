@@ -6,7 +6,6 @@
   left: -100%;
   padding: $base * 4 $base * 7 $base * 4 $base * 5;
   border-radius: $base * 3;
-  border-left: 6px solid $color-yellow;
   background: $color-white;
   box-shadow: 0 $base $base * 2 rgba(0, 0, 0, 0.1);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
@@ -28,7 +27,6 @@
   justify-content: center;
   width: $base * 7;
   height: $base * 7;
-  background-color: $color-yellow;
   color: $color-white;
   font-size: $base * 4;
   border-radius: 50%;
@@ -81,7 +79,7 @@
 
 .toast__progress.toast_active {
   &:before {
-    animation: progress 2s linear forwards;
+    animation: progress 2.5s linear forwards;
   }
 }
 
