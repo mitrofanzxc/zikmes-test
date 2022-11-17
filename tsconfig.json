@@ -2,13 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@assets/*": ["assets/*"],
-      "@components/*": ["components/*"],
-      "@constants/*": ["constants/*"],
-      "@pages/*": ["pages/*"],
-      "@store/*": ["store/*"],
-      "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"]
+      "images/*": ["images/*"],
+      "sass/*": ["sass/*"],
+      "utils/*": ["utils/*"]
     },
     "allowJs": true,
     "target": "es2021",
