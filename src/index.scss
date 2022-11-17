@@ -23,11 +23,11 @@ body {
 }
 
 .border-left_yellow {
-  border-left: 6px solid $color-yellow;
+  border-left: $base solid $color-yellow;
 }
 
 .border-left_green {
-  border-left: 6px solid $color-green;
+  border-left: $base solid $color-green;
 }
 
 .bg-color_yellow {
@@ -58,11 +58,11 @@ body {
 .input-wrapper {
   transform: skewX(-45deg);
   background-color: $color-grey-09;
-  border: 2px solid $color-white;
+  border: 0.125rem solid $color-white;
   overflow: hidden;
 
   @media (max-width: $breakpoint-md-min) {
-    border-right-width: 1px;
+    border-right-width: 0.063rem;
     transform: skewX(0);
   }
 }
@@ -95,12 +95,12 @@ body {
 .submit-wrapper {
   transform: skewX(-45deg);
   background-color: $color-red-09;
-  border: 2px solid $color-white;
+  border: 0.125rem solid $color-white;
   overflow: hidden;
   transition: background-color $transition-01;
 
   @media (max-width: $breakpoint-md-min) {
-    border-left-width: 1px;
+    border-left-width: 0.063rem;
     transform: skewX(0);
   }
 }

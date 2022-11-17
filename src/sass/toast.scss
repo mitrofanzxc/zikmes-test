@@ -10,6 +10,14 @@
   box-shadow: 0 $base $base * 2 rgba(0, 0, 0, 0.1);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
   overflow: hidden;
+
+  @media (max-width: $breakpoint-md-min) {
+    padding: $base * 2 $base * 5 $base * 2 $base * 4;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    padding: $base * 2 $base * 3 $base * 2 $base * 2;
+  }
 }
 
 .toast.toast_active {
@@ -25,11 +33,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: $base * 7;
   width: $base * 7;
+  min-height: $base * 7;
   height: $base * 7;
   color: $color-white;
   font-size: $base * 4;
   border-radius: 50%;
+
+  @media (max-width: $breakpoint-md-min) {
+    font-size: $base * 3;
+  }
 }
 
 .toast__text {
@@ -38,6 +52,14 @@
   margin: 0 $base * 4;
   color: $color-dark-06;
   font-size: $base * 4;
+
+  @media (max-width: $breakpoint-md-min) {
+    font-size: $base * 3;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    margin: 0 $base * 2;
+  }
 }
 
 .toast__header {
@@ -56,6 +78,10 @@
   &:hover {
     opacity: 1;
   }
+
+  @media (max-width: $breakpoint-xs-min) {
+    top: $base;
+  }
 }
 
 .toast__progress {
@@ -63,7 +89,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 0.188rem;
   background: $color-grey-09;
 
   &:before {
