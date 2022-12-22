@@ -1,26 +1,26 @@
-# Deploy: [Link](https://mitrofanzxc.github.io/zikmes-test/)
+# Deploy: [Link](https://mitrofanzxc.github.io/zikmes-test/) 
 
-### `yarn`
+### `yarn` 
 
-Install all dependencies.
+Install all dependencies. 
 
-### `yarn start`
+### `yarn start` 
 
-Run the app in the development mode.
+Run the app in the development mode. 
 
-## Тестовое задание
+## Requirements of the project: 
 
-- [x] Сверстать форму с полем для ввода и кнопкой как на изображении
+- [x] Create form with input field and button as in the image: 
 
-<img src="./src/images/form-desktop.jpg" width="auto" height="100">
+<img src="./src/images/form-desktop.jpg" width="auto" height="100" /> 
 
-- [x] Вид формы на мобильных устройствах
+- [x] Form view on mobile devices: 
 
-<img src="./src/images/form-mobile.jpg" width="auto" height="100">
+<img src="./src/images/form-mobile.jpg" width="auto" height="100" /> 
 
-- [x] Организовать простую валидацию поля (должно быть заполнено)
-- [x] При нажатии кнопки отправлять данные из формы на любой сервис (на ваше усмотрение) без перезагрузки страницы
-- [x] После получения ответа вывести уведомление о результате выполнения запроса
-- [x] Организовать сборку проекта при помощи Webpack с применением CSS препроцессора и оптимизацией скриптов под старые версии браузеров (SCSS, Babel)
-- [x] Включить в сборку проекта (Webpack) библиотеку шрифтов font-awesome, добавить любую иконку на кнопку
-- [x] Внести изменения в систему контроля версий (git)
+- [x] Organize a simple field validation (must be filled in); 
+- [x] When you click the button, send data from the form to any service (at your discretion) without reloading the page; 
+- [x] After receiving a response, display a notification about the result of the request; 
+- [x] Organize the assembly of the project using Webpack using the CSS preprocessor and optimizing scripts for older versions of browsers (SCSS, Babel); 
+- [x] Include the font-awesome font library in the project assembly (Webpack), add any icon to the button; 
+- [x] Commit changes to version control system (git); 
